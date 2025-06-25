@@ -15,7 +15,27 @@ test("Greet renders successfully", () => {
   expect(textElement).toBeInTheDocument();
 });
 
-test("Greet renders with a name", () => {
+// test("Greet renders with a name", () => {
+//   render(<Greet name="Dera" />);
+
+//   const textElement = screen.getByText("Hello Dera");
+
+//   // check if the text "Hello Dera" is present
+//   expect(textElement).toBeInTheDocument();
+// });
+
+// "test.only" makes sure only that test runs on save
+test.only("Greet renders with a name", () => {
+  render(<Greet name="Dera" />);
+
+  const textElement = screen.getByText("Hello Dera");
+
+  // check if the text "Hello Dera" is present
+  expect(textElement).toBeInTheDocument();
+});
+
+// "test.skip" makes sure only that test is skipped on save
+test.skip("Greet renders Hello Dera", () => {
   render(<Greet name="Dera" />);
 
   const textElement = screen.getByText("Hello Dera");
