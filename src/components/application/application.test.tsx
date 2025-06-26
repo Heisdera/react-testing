@@ -18,6 +18,19 @@ describe("Application", () => {
     const paragraphElement = screen.getByText("All fields are mandatory");
     expect(paragraphElement).toBeInTheDocument();
 
+    const paragraphElementSubStringMatch = screen.getByText("ll fields are", {
+      exact: false,
+    }); // text match as substring
+    expect(paragraphElementSubStringMatch).toBeInTheDocument();
+
+    const paragraphElementRegexMatch = screen.getByText(/all Fields/i); // text match as regex
+    expect(paragraphElementRegexMatch).toBeInTheDocument();
+
+    const paragraphElementCustomFuncMatch = screen.getByText((content) =>
+      content.startsWith("All")
+    ); // text match as custom function
+    expect(paragraphElementCustomFuncMatch).toBeInTheDocument();
+
     const closeElement = screen.getByTitle("close");
     expect(closeElement).toBeInTheDocument();
 
