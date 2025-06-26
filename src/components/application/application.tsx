@@ -9,6 +9,7 @@ export const Application = () => {
         src="https://images.unsplash.com/photo-1726160423882-7c6cfc1687a4?q=80&w=474&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt="a person with a laptop coding"
       />
+      <div data-testid="custom-element">Custom HTML element</div>
       <form>
         <div>
           <label htmlFor="name">Name</label>
