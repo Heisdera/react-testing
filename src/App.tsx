@@ -1,10 +1,10 @@
 import "./App.css";
-import { Skills } from "./components/skills/skills";
+import { Counter } from "./components/counter/counter";
 
 function App() {
   return (
     <div className="App">
-      <Skills skills={["HTML", "CSS"]} />
+      <Counter />
     </div>
   );
 }
