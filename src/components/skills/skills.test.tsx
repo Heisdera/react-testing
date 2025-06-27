@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import { logRoles } from "@testing-library/react";
 import { Skills } from "./skills";
 
 describe("Skills", () => {
@@ -33,7 +34,9 @@ describe("Skills", () => {
   });
 
   test("Start learning button is eventually displayed", async () => {
-    render(<Skills skills={skills} />);
+    const view = render(<Skills skills={skills} />);
+    logRoles(view.container);
+    // screen.debug();
     const startLearningButton = await screen.findByRole(
       "button",
       {
@@ -43,6 +46,7 @@ describe("Skills", () => {
         timeout: 2000, // this is set to 2000 because findBy.. default timeout is 1000 and the 'Start learning' button only get displayed after 1100 milliseconds
       }
     );
+    // screen.debug();
     expect(startLearningButton).toBeInTheDocument();
   });
 });
