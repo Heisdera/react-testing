@@ -94,3 +94,22 @@ describe("Counter", () => {
 /** Convenience API
  * - tab()
  */
+
+/** Utility APIs
+ * - clear() - clear editable elements
+ * - selectOptions() - select items in a select dropdown or listbox where you can select multiple elements
+ * - deselectOptions()
+ * - upload()
+ * - type() -
+ */
+
+/**Clipboard APIs
+ * - copy()
+ * - cut()
+ * - paste()
+ */
+
+/**Keyboard APIs
+ * - keyboard('foo') // translates to: f, o, o
+ * - keyboard('{shift>}A{/Shift}') // translates to: Shift(down), A, Shift(up)
+ */
